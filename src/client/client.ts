@@ -233,4 +233,54 @@ export class EtherscanClient {
       tag: "latest",
     });
   }
+
+  /**
+   * Get the current gas oracle for Ethereum.
+   * @returns Gas prices in low, medium, and high levels.
+   */
+  public async getGasOracle() {
+    return this.fetchFromEtherscan({
+      module: "gastracker",
+      action: "gasoracle",
+    });
+  }
+
+  /**
+   * Get the daily average gas limit and usage for a given date.
+   * @param date The date in YYYY-MM-DD format.
+   * @returns Gas limit and usage statistics.
+   */
+  public async getDailyGasUsage(date: string) {
+    return this.fetchFromEtherscan({
+      module: "gastracker",
+      action: "dailygasusage",
+      date,
+    });
+  }
+
+  /**
+   * Get the historical average gas price for a specific date.
+   * @param date The date in YYYY-MM-DD format.
+   * @returns Historical gas price data.
+   */
+  public async getHistoricalGasPrice(date: string) {
+    return this.fetchFromEtherscan({
+      module: "gastracker",
+      action: "averagegasprice",
+      date,
+    });
+  }
+
+  /**
+   * Get an estimation of transaction confirmation time for a given gas price.
+   * @param gasPrice The gas price in Gwei.
+   * @returns Estimated confirmation time in seconds.
+   */
+  public async getEstimatedConfirmationTime(gasPrice: number) {
+    return this.fetchFromEtherscan({
+      module: "gastracker",
+      action: "gasestimate",
+      gasprice: gasPrice,
+    });
+  }
 }
