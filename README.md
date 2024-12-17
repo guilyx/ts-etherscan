@@ -18,6 +18,7 @@ Install the package via npm:
 
 ```bash
 npm install etherscan-client
+```
 
 ## **Usage**
 
