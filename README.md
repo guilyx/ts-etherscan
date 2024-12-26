@@ -17,7 +17,7 @@ A partially-still-in-progress-featured TypeScript client for interacting with th
 Install the package via npm:
 
 ```bash
-npm install ts-etherscan@1.0.2
+npm install ts-etherscan@1.0.3
 ```
 
 ## **Usage**
