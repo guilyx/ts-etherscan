@@ -1,6 +1,6 @@
 {
   "name": "ts-etherscan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Typescript Etherscan wrapper for their V2 API.",
   "main": "index.js",
   "module": "./dist/index.js",
