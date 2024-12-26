@@ -9,7 +9,7 @@ export { weiToEther, etherToWei, weiToGwei, gweiToWei, etherToGwei, gweiToEther 
 (async () => {
   const etherscan = new EtherscanClient();
 
-  const address = "0xebcc98573c3cd9b5b61900d1304da938b5036a0d";
+  const address = "0x46da6d5C741a4435283b384a10Ba44445D496a88";
 
   try {
     const transactions = await etherscan.getAllTransactionsFromWallet(address)
