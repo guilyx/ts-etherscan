@@ -3,8 +3,26 @@
   "version": "1.0.0",
   "description": "A Typescript Etherscan wrapper for their V2 API.",
   "main": "index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./client": {
+      "import": "./dist/client/client.js",
+      "require": "./dist/client/client.js"
+    },
+    "./utils": {
+      "import": "./dist/utils/unit_converters.js",
+      "require": "./dist/utils/unit_converters.js"
+    }
+  },
+  "files": ["dist"],
   "scripts": {
     "test": "jest",
+    "build": "tsc",
     "start": "node dist/index.js"
   },
   "keywords": [],
