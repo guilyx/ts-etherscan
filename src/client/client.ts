@@ -1,7 +1,4 @@
 import axios, { AxiosInstance } from "axios";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 export interface EtherscanConfig {
   apiKey?: string; // Optional, fallback to ENV variable
@@ -14,7 +11,7 @@ export class EtherscanClient {
   private readonly httpClient: AxiosInstance;
 
   constructor(config: EtherscanConfig = {}) {
-    this.apiKey = config.apiKey || process.env.ETHERSCAN_API_KEY || "";
+    this.apiKey = config.apiKey || "";
 
     if (!this.apiKey) {
       throw new Error("Missing Etherscan API key. Set it in .env or pass it via the constructor.");
