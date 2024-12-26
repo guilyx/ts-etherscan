@@ -17,7 +17,7 @@ A partially-still-in-progress-featured TypeScript client for interacting with th
 Install the package via npm:
 
 ```bash
-npm install etherscan-client
+npm install ts-etherscan@1.0.1
 ```
 
 ## **Usage**
@@ -31,7 +31,7 @@ npm install etherscan-client
 This example fetches the first 100 normal transactions for the provided Ethereum address, starting from block 0 to the latest block, sorted in ascending order.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -49,7 +49,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 Internal transactions are interactions between smart contracts. This example fetches up to 100 internal transactions for the given address.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -67,7 +67,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 This fetches all ERC20 token transfers associated with the given address. You can optionally filter by a specific contract address.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -85,7 +85,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 The getGasOracle method retrieves current gas prices (in Gwei) for low, medium, and high transaction priorities.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -101,7 +101,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 This example estimates the time (in seconds) it would take for a transaction to confirm at a gas price of 50 Gwei.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -118,7 +118,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 This fetches the balance for the provided Ethereum address, returning the value in Wei.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -136,7 +136,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 This example retrieves the average gas price for a specific date. The date must be in the YYYY-MM-DD format.
 
 ```ts
-import { EtherscanClient } from "etherscan-client";
+import { EtherscanClient } from "ts-etherscan";
 
 const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 
@@ -154,7 +154,7 @@ const etherscan = new EtherscanClient({ apiKey: "YOUR_ETHERSCAN_API_KEY" });
 This example calculates the total gas spent for two successful transactions, converting the result from Wei to Ether for easier readability.
 
 ```ts
-import { calculateGasSpentWei, weiToEther } from "etherscan-client/utils";
+import { calculateGasSpentWei, weiToEther } from "ts-etherscan/utils";
 
 const transactions = [
   { gasUsed: BigInt(21000), gasPrice: BigInt(50), isError: "0" },
